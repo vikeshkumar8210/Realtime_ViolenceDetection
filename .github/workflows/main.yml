@@ -16,5 +16,5 @@ jobs:
     - name: Build & Push Image
       run: |
         echo "${{ secrets.DOCKER }}" | docker login -u "vikesh82" --password-stdin
-        docker image build -t vikeshkumar8210/realtime_violencedetection:v1.
+        docker image build -t vikeshkumar8210/realtime_violencedetection:v1 .
         docker push vikesh82/realtime_violencedetection:v1
