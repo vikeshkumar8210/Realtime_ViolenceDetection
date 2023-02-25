@@ -9,6 +9,6 @@ WORKDIR /app
 COPY . .
 
 LABEL maintainer="Vikesh Kumar <info@vikeshkumar8210.com>" \
-      version= "1.0"
+      version="1.0"
 
 CMD flask run --host=0.0.0.0 --port=5000 
