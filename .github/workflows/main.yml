@@ -15,6 +15,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
-        echo "${{ secrets.DOCKER }}" | docker login -u "vikesh82" --password-stdin
+        echo "${{ secrets.DOCKER }}" | docker login -u "vikesh82" --password-stdin "Vikesh@8210"
         docker image build -t vikeshkumar8210/Realtime_ViolenceDetection:v1 .
         docker push vikeshkumar8210/Realtime_ViolenceDetection:v1
