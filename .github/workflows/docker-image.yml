@@ -19,7 +19,7 @@ jobs:
         DOCKER_USER: ${{secrets.DOCKER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: |
-        docker login -u $DOCKER -p $DOCKER_PASSWORD
+        docker login -u $Vikesh82 -p $Vikesh@8210
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag vikeshkumar8210/realtime_violencedetection:$(date +%s)
     - name: Docker Push
