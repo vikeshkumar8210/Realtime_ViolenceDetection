@@ -26,7 +26,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       -
         name: Build and push image
-        uses: violence_project/docker-build-push@v2
+        uses: docker/docker-build-push@v2
         with:
           image: vikesh82/violence_project:v3
           registry: docker.io
