@@ -11,7 +11,7 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -24,12 +24,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-    
       -
-        name: Build and push Docker Image
-        uses: vikeshkumar8210/docker-build-push@v2
+        name: Build and push
+        uses: docker/build-push-action@v4
         with:
-          image: vikesh82/realtime_violencedetection
-          registry: docker.io
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          context: .
+          push: true
+          tags: user/app:latest
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.DOCKER_PASSWORD }}
