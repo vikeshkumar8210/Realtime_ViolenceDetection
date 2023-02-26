@@ -11,7 +11,7 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -27,7 +27,7 @@ jobs:
     
       -
         name: Build and push Docker Image
-        uses: mr-smithers-excellent/docker-build-push@v5
+        uses: vikesh82/docker-build-push@v2
         with:
           image: vikesh82/realtime_violencedetection
           registry: docker.io
