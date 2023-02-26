@@ -24,15 +24,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      -
-        name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: true
-          tags: user/app:latest
-          secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.DOCKER_PASSWORD }}
+    
       -
         name: Build and push Docker Image
         uses: mr-smithers-excellent/docker-build-push@v5
