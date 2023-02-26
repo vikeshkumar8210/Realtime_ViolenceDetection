@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      env:
+        DOCKER_USER: ${{secrets.DOCKER}}
+        DOCKER_PASSWORD: ${{secrets.Vikesh@8210}}
+      run: |
+        docker login -u $Vikesh82 -p $Vikesh@8210
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag vikeshkumar8210/realtime_violencedetection:$(date +%s)
+    - name: Docker Push
+      run: docker push ${{secrets.Docker}}/real_timeviolencedetection
