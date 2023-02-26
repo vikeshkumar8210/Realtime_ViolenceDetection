@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag vikeshkumar8210/realtime_violencedetection:$(date +%s)
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/real_timeviolencedetection
+      run: docker push vikesh82/realtime_violencedetection:v3
