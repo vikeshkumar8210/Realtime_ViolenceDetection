@@ -25,11 +25,10 @@ jobs:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       -
-        name: Build and push
+        name: Build and push image
         uses: docker/build-push-action@v4
         with:
-          context: .
-          push: true
-          tags: user/app:latest
-          secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.DOCKER_PASSWORD }}
+          image: vikeshkumar8210/realtime_violencedetection
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
