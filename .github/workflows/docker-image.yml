@@ -28,7 +28,7 @@ jobs:
         name: Build and push image
         uses: docker/build-push-action@v4
         with:
-          image: vikesh82/violence_project
+          image: vikesh82/violence_project/new:v4
           registry: docker.io
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
