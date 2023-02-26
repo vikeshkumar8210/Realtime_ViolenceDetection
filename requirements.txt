@@ -1,6 +1,0 @@
-tensorflow
-flask
-opencv-python
-numpy
-pandas
-pymongo
