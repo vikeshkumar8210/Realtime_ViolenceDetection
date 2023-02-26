@@ -27,7 +27,7 @@ jobs:
     
       -
         name: Build and push Docker Image
-        uses: vikesh82/docker-build-push@v2
+        uses: vikeshkumar8210/docker-build-push@v2
         with:
           image: vikesh82/realtime_violencedetection
           registry: docker.io
